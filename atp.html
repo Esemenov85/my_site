@@ -18,6 +18,11 @@
     </style>
 </head>
 <body>
+    <div class="container">
+        <h1>Контакты</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+        <button class="back-button" onclick="goToMain()">На главную</button>
+    </div>
     <h1>Мои картинки</h1>
     <img src="https://via.placeholder.com/200" href="https://www.google.com">
     <img src="https://via.placeholder.com/200" href="https://www.youtube.com">
@@ -33,6 +38,12 @@
                 window.open(image.href, '_blank'); // Открывает ссылку в новом окне.
             });
         });
+    </script>
+    
+    <script>
+        function goToMain() {
+            location.href = '/my_site';
+        }
     </script>
 </body>
 </html>
