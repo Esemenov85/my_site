@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Дэшборды</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+        
+        img {
+            width: 50%;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: inline-block; /* для отображения картинок на все разрешениях экрана */
+        }
+        
+        @media (max-width: 768px) { /* Для tablets и смартфонов */
+            img {
+                width: 100%; /* расширение наtabletках и смартфонах */
+            }
+        }
+        
+        @media (max-width: 480px) { /* Для smartfonov s razmerom ekrama nizhe 480 pikselyi */
+            img {
+                width: 90%; /* уменьшение размера картинок для smartfonov s menshim razmerom */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Фабрика данных</h1>
+        <div class="tabs">
+            <button class="tab active" id="about-tab">О себе</button>
+            <button class="tab" id="contact-tab">Контакты</button>
+            <button class="tab" id="atp-tab">Примеры</button>
+        </div>
+    </div>
+    <script>
+        const aboutTab = document.getElementById('about-tab');
+        const contactTab = document.getElementById('contact-tab');
+        const atpTab = document.getElementById('atp-tab');
+
+        aboutTab.addEventListener('click', () => {
+            location.href = '/about';
+        });
+
+        contactTab.addEventListener('click', () => {
+            location.href = '/contact';
+        });
+
+        atpTab.addEventListener('click', () => {
+            location.href = '/atp';
+        });
+    </script>
+    <h2>Примеры работ</h2>
+    <a href="https://index.tatarstan.ru" target="_blank" rel="noopener noreferrer">
+        <img src="https://cdn.icon-icons.com/icons2/4216/PNG/512/graph_marketing_time_strategy_finance_management_business_icon_263055.png" 
+            /*onclick="openInNewTab(event.target.href)"*/
+            alt="Работает на Татсфере" 
+            border="5px" 
+            style="width:128px;height:128px;">
+    </a>
+    <a href="https://index.tatarstan.ru/atp/dashboard/53/?native_filters_key=coxKEcJjASBXXS2GlXEgmWE825ixbLtcNE5CAznPt0aAcFL7Xq1SuYTQtKb-pR3U" 
+        target="_blank" rel="noopener noreferrer">
+        <img src=".\images\business.png" 
+            alt="Работает на Татсфере"
+            border="5px" 
+            style="float:right;width:128px;height:128px;">
+    </a>
+</body>
+</html>
